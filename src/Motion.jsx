@@ -1,27 +1,28 @@
 import React, { useEffect, useRef } from "react";
 import Animator from "./animator";
 
+let parameters = {
+  hover: [],
+  click: [],
+  trigger: [],
+  auto: [],
+
+  instantRollback: false,
+  rollback: true,
+  repeat: false,
+  factor: 0,
+  delay: 0,
+  stepDelay: 0,
+  skip: 0,
+
+  duration: 300,
+  ease: "ease-in-out",
+};
+const animators = [];
+let activated = false;
+
 const Motion = (props) => {
   const containerRef = useRef(null);
-  let parameters = {
-    hover: [],
-    click: [],
-    trigger: [],
-    auto: [],
-
-    instantRollback: false,
-    rollback: true,
-    repeat: false,
-    factor: 0,
-    delay: 0,
-    stepDelay: 0,
-    skip: 0,
-
-    duration: 300,
-    ease: "ease-in-out",
-  };
-  const animators = [];
-  const activated = false;
 
   useEffect(() => {
     setup();
@@ -30,6 +31,24 @@ const Motion = (props) => {
       animators.forEach((animator) => animator.destroyListeners());
     };
   }, []);
+
+  useEffect(() => {
+    const animator = animators.find(
+      (animator) => animator.action === "trigger"
+    );
+
+    if (animator) {
+      setTimeout(() => {
+        if (!activated) {
+          animator.start(true);
+        } else {
+          animator.stop(true);
+        }
+
+        activated = !activated;
+      }, parameters.delay);
+    }
+  }, [props.value]);
 
   const setup = () => {
     parameters = {
