@@ -90,7 +90,7 @@ const Motion = (props) => {
     containerRef.current.classList.add(parameters.ease);
   };
 
-  return React.createElement(props.tag, {
+  return React.createElement(props.tag || "div", {
     children: props.children,
     ref: containerRef,
     className: props.className,
