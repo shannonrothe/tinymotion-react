@@ -1,0 +1,26 @@
+{
+  "name": "tinymotion-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/tinymotion-react.umd.js",
+  "module": "dist/tinymotion-react.esm.js",
+  "unpkg": "dist/tinymotion-react.min.js",
+  "scripts": {
+    "build": "npm run build:umd && npm run build:es && npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/tinymotion-react.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/tinymotion-react.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/tinymotion-react.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@types/react": "^17.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rollup-plugin-jsx": "^1.0.3"
+  }
+}
