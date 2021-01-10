@@ -103,4 +103,5 @@ This project is based on the original Vue version and is subject to differ at ti
 ## Authors
 
 [Boris Lepikhin](https://twitter.com/lepikhinb) – original author of Vue version
+
 [Shannon Rothe](https://twitter.com/shannonrothe)
