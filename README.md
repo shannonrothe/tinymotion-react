@@ -46,26 +46,26 @@
 </table>
 
 ## Installation
+
 **NPM**
+
 ```sh
 npm i -S tinymotion-react
 ```
 
 **Yarn**
+
 ```sh
 yarn add tinymotion-react
 ```
 
 ## How to use
+
 ```jsx
 function App() {
   return (
     <Motion
-      hover={[
-        'scale-100',
-        'scale-125 rotate-45',
-        'scale-100 rotate-0',
-      ]}
+      hover={["scale-100", "scale-125 rotate-45", "scale-100 rotate-0"]}
       options={{
         repeat: true,
         rollback: true,
@@ -77,7 +77,7 @@ function App() {
         duration: 600,
         ease: "ease-in-out",
       }}
-      class="w-16 h-16 bg-blue-500 shadow rounded-lg"
+      class="w-16 h-16 bg-blue-500 rounded-lg shadow"
     />
   );
 }
@@ -86,16 +86,21 @@ export default App;
 ```
 
 ## Examples
+
 **Note:** These examples are in Vue
-* [Hover](https://tinymotion.me/#hover)
-* [Click](https://tinymotion.me/#click)
-* [External trigger](https://tinymotion.me/#trigger)
-* [Auto](https://tinymotion.me/#auto)
-* [Switch](https://tinymotion.me/usage#switch)
-* [Loader](https://tinymotion.me/usage#loader)
+
+- [Hover](https://tinymotion.me/#hover)
+- [Click](https://tinymotion.me/#click)
+- [External trigger](https://tinymotion.me/#trigger)
+- [Auto](https://tinymotion.me/#auto)
+- [Switch](https://tinymotion.me/usage#switch)
+- [Loader](https://tinymotion.me/usage#loader)
 
 ## Notes
+
 This project is based on the original Vue version and is subject to differ at times. Some features may be missing but I will aim to keep it updated with the original version.
 
-## Author
+## Authors
+
+[Boris Lepikhin](https://twitter.com/lepikhinb) – original author of Vue version
 [Shannon Rothe](https://twitter.com/shannonrothe)
