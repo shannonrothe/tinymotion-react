@@ -1,5 +1,6 @@
 import buble from "@rollup/plugin-buble";
 import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
 
 export default {
   input: "src/index.js",
@@ -8,12 +9,13 @@ export default {
     exports: "named",
   },
   plugins: [
+    resolve({
+      extensions: [".js", ".jsx"],
+    }),
     commonjs(),
-    // jsx({
-    //   factory: "React.createElement",
-    // }),
     buble({
       objectAssign: "Object.assign",
     }),
   ],
+  external: ["react", "react-dom"],
 };
