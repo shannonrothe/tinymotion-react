@@ -23,5 +23,5 @@ declare module "tinymotion-react" {
     options?: MotionOptions;
   }
 
-  export const Motion: (props: MotionProps) => JSX.Element;
+  export default function Motion(props: MotionProps): JSX.Element;
 }

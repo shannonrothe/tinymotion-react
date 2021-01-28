@@ -6,7 +6,7 @@
     <tr>
         <td align="center"><a href="https://tinymotion.me/#hover"><strong>Hover</strong></a></td>
         <td align="center"><a href="https://tinymotion.me/#click"><strong>Click</strong></a></td>
-        <td align="center"><a href="https://tinymotion.me/#trigger"><strong>Trigger (to be implemented)</strong></a></td>
+        <td align="center"><a href="https://tinymotion.me/#trigger"><strong>Trigger</strong></a></td>
         <td align="center"><a href="https://tinymotion.me/#auto"><strong>Auto</strong></a></td>
     </tr>
     <tr>
@@ -62,6 +62,9 @@ yarn add tinymotion-react
 ## How to use
 
 ```jsx
+import React from "react";
+import Motion from "tinymotion-react";
+
 function App() {
   return (
     <Motion

@@ -1,3 +1,3 @@
 import Motion from "./Motion";
 
-export { Motion };
+export default Motion;

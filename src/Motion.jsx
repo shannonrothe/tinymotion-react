@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Animator from "./animator";
+import { Animator } from "tinymotion";
 
 let parameters = {
   hover: [],
